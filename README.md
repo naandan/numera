@@ -47,7 +47,7 @@ Numera adalah aplikasi web untuk mengecek operator telepon seluler Indonesia sec
 
 1. **Clone repository**
    ```bash
-   git clone https://github.com/yourusername/numera.git
+   git clone https://github.com/naandan/numera.git
    cd numera
    ```
 
@@ -139,8 +139,8 @@ Didistribusikan di bawah Lisensi MIT. Lihat `LICENSE` untuk informasi lebih lanj
 ## 👨‍💻 Author
 
 **Nandan**
-- GitHub: [@nandan](https://github.com/nandan)
-- Twitter: [@nandan_dev](https://twitter.com/nandan_dev)
+- GitHub: [@naandan](https://github.com/naandan)
+- Twitter: [@nandan_dev](https://x.com/nandanrmdni)
 
 ## 🙏 Ucapan Terima Kasih
 
@@ -151,7 +151,7 @@ Didistribusikan di bawah Lisensi MIT. Lihat `LICENSE` untuk informasi lebih lanj
 
 ## 📞 Support
 
-Jika Anda memiliki pertanyaan atau masalah, silakan buat [issue](https://github.com/yourusername/numera/issues) di GitHub.
+Jika Anda memiliki pertanyaan atau masalah, silakan buat [issue](https://github.com/naandan/numera/issues) di GitHub.
 
 ---
 
