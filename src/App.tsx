@@ -198,7 +198,7 @@ export default function App() {
         <footer className="mt-6 sm:mt-8 text-base sm:text-lg text-blue-600 font-black uppercase bg-yellow-200 p-4 border-8 border-black">
           <p>Dibangun dengan Vite + React + Tailwind CSS. Deteksi Provider Real-Time yang Mentah.</p>
           <div className="mt-4 text-sm text-gray-700">
-            <p><strong>Kode Sumber:</strong> <a href="https://github.com/naandan/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Repositori GitHub</a></p>
+            <p><strong>Kode Sumber:</strong> <a href="https://github.com/naandan/numera" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Repositori GitHub</a></p>
             <p><strong>Penulis:</strong> Nandan</p>
             <p><strong>Lisensi:</strong> MIT</p>
           </div>
