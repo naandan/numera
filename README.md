@@ -1,69 +1,158 @@
-# React + TypeScript + Vite
+# Numera - Provider Checker Indonesia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-Currently, two official plugins are available:
+Numera adalah aplikasi web untuk mengecek operator telepon seluler Indonesia secara real-time. Aplikasi ini menggunakan pendekatan brutalism design dengan antarmuka yang bold dan responsif.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Fitur
 
-## Expanding the ESLint configuration
+- 🔍 **Pengecekan Real-time**: Cek operator telepon secara instan saat mengetik
+- 📱 **Responsive Design**: Kompatibel dengan semua ukuran perangkat
+- 🎨 **Brutalism UI**: Desain dengan gaya brutalism yang unik
+- ⚡ **Performa Tinggi**: Dibangun dengan Vite untuk kecepatan optimal
+- 🔒 **TypeScript**: Type safety untuk kode yang lebih robust
+- 📋 **Copy to Clipboard**: Salin nomor telepon dengan mudah
+- 🌐 **SEO Optimized**: Meta tags lengkap untuk search engine
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Teknologi
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Frontend**: React 19 + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Font**: Bebas Neue (Google Fonts)
+- **Linting**: ESLint
+- **Package Manager**: pnpm
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📋 Operator yang Didukung
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Telkomsel (0852, 0853, 0811, 0812, 0813, 0821, 0822, 0851)
+- XL Axiata (0817, 0818, 0819, 0859, 0877, 0878, 0879)
+- Indosat Ooredoo (0814, 0815, 0816, 0855, 0856, 0857, 0858)
+- Three (0896, 0897, 0898, 0899)
+- Axis (0831, 0838)
+- Smartfren (0881, 0882, 0883, 0884)
+
+## 🛠️ Instalasi
+
+### Prasyarat
+
+- Node.js (versi 18 atau lebih baru)
+- pnpm (atau npm/yarn)
+
+### Langkah Instalasi
+
+1. **Clone repository**
+   ```bash
+   git clone https://github.com/yourusername/numera.git
+   cd numera
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
+
+3. **Jalankan development server**
+   ```bash
+   pnpm dev
+   ```
+
+4. **Buka browser**
+   ```
+   http://localhost:5173
+   ```
+
+## 📖 Penggunaan
+
+1. Masukkan nomor telepon Indonesia di kolom input
+2. Aplikasi akan secara otomatis mendeteksi operator saat Anda mengetik
+3. Lihat hasil di bagian "Hasil Pencarian"
+4. Klik tombol "Salin Nomor" untuk menyalin nomor yang sudah dinormalisasi
+5. Gunakan tombol "Contoh" untuk mencoba nomor dari operator tertentu
+
+## 🏗️ Struktur Proyek
+
+```
+numera/
+├── public/
+│   ├── favicon.ico
+│   └── vite.svg
+├── src/
+│   ├── App.tsx          # Komponen utama aplikasi
+│   ├── main.tsx         # Entry point React
+│   ├── index.css        # Global styles
+│   └── vite-env.d.ts    # Type definitions
+├── index.html           # Template HTML
+├── package.json         # Dependencies dan scripts
+├── tailwind.config.ts   # Konfigurasi Tailwind CSS
+├── tsconfig.json        # Konfigurasi TypeScript
+├── vite.config.ts       # Konfigurasi Vite
+└── README.md            # Dokumentasi ini
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎨 Kustomisasi
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Menambah Operator Baru
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Edit file `src/App.tsx` dan tambahkan prefix baru ke dalam `PREFIX_MAP`:
+
+```typescript
+const PREFIX_MAP: Record<string, string[]> = {
+  "Telkomsel": [
+    "0852","0853","0811","0812","0813","0821","0822","0851"
+  ],
+  "OperatorBaru": [
+    "08xx","08yy" // Tambahkan prefix baru di sini
+  ],
+  // ... operator lainnya
+};
 ```
+
+### Mengubah Styling
+
+Aplikasi menggunakan Tailwind CSS. Edit class di `src/App.tsx` untuk mengubah tampilan.
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: < 640px
+- **Tablet**: 640px - 1024px
+- **Desktop**: > 1024px
+
+## 🤝 Kontribusi
+
+Kontribusi sangat diterima! Silakan ikuti langkah berikut:
+
+1. Fork repository
+2. Buat branch fitur baru (`git checkout -b feature/AmazingFeature`)
+3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buat Pull Request
+
+## 📄 Lisensi
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 👨‍💻 Author
+
+**Nandan**
+- GitHub: [@nandan](https://github.com/nandan)
+- Twitter: [@nandan_dev](https://twitter.com/nandan_dev)
+
+## 🙏 Acknowledgments
+
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [Vite](https://vitejs.dev/) - Next generation frontend tooling
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
+- [Bebas Neue Font](https://fonts.google.com/specimen/Bebas+Neue) - Display font from Google Fonts
+
+## 📞 Support
+
+Jika Anda memiliki pertanyaan atau masalah, silakan buat [issue](https://github.com/yourusername/numera/issues) di GitHub.
+
+---
+
+⭐ **Star this repo** jika Anda menyukai proyek ini!
