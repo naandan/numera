@@ -140,7 +140,7 @@ Didistribusikan di bawah Lisensi MIT. Lihat `LICENSE` untuk informasi lebih lanj
 
 **Nandan**
 - GitHub: [@naandan](https://github.com/naandan)
-- Twitter: [@nandan_dev](https://x.com/nandanrmdni)
+- Twitter: [@nandanrmdni](https://x.com/nandanrmdni)
 
 ## 🙏 Ucapan Terima Kasih
 
