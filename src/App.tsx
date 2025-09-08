@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-// Provider Checker App (single-file React component for Vite + Tailwind)
-// Default export a React component so it can be used as src/App.jsx
+// Aplikasi Provider Checker (komponen React satu-file untuk Vite + Tailwind)
+// Export default komponen React sehingga bisa digunakan sebagai src/App.jsx
 
 interface Match {
   prefix: string;
@@ -36,7 +36,7 @@ const PREFIX_MAP: Record<string, string[]> = {
   ]
 };
 
-// Build a reverse lookup: prefix -> provider (fast checking)
+// Membangun pencarian terbalik: prefix -> provider (pengecekan cepat)
 const PREFIX_TO_PROVIDER: Record<string, string> = Object.entries(PREFIX_MAP).reduce((acc, [provider, prefixes]) => {
   prefixes.forEach(p => (acc[p] = provider));
   return acc;
@@ -44,13 +44,13 @@ const PREFIX_TO_PROVIDER: Record<string, string> = Object.entries(PREFIX_MAP).re
 
 function normalizeNumber(input: string): string {
   if (!input) return "";
-  // keep only digits and plus
+  // simpan hanya digit dan plus
   let s = input.trim();
-  // remove spaces, dashes, parentheses
+  // hapus spasi, dash, tanda kurung
   s = s.replace(/[^0-9+]/g, "");
-  // handle +62 -> 0
+  // tangani +62 -> 0
   if (s.startsWith("+62")) s = "0" + s.slice(3);
-  // handle leading 62 without plus
+  // tangani awalan 62 tanpa plus
   if (s.startsWith("62") && !s.startsWith("0")) s = "0" + s.slice(2);
   return s;
 }
@@ -62,16 +62,16 @@ function findProvidersByNumber(raw: string): CheckResult {
     return { normalized: n, matches: [], reason: "Format nomor tidak dikenali" };
   }
 
-  // try 4-digit prefix first
+  // coba prefix 4-digit terlebih dahulu
   const first4 = n.slice(0, 4);
   const first3 = n.slice(0, 3);
   const matches = [];
 
   if (PREFIX_TO_PROVIDER[first4]) matches.push({ prefix: first4, provider: PREFIX_TO_PROVIDER[first4] });
-  // also check 3-digit (fallback) in case some ranges are 3-digit
+  // juga periksa 3-digit (fallback) jika beberapa range adalah 3-digit
   if (PREFIX_TO_PROVIDER[first3] && first3 !== first4) matches.push({ prefix: first3, provider: PREFIX_TO_PROVIDER[first3] });
 
-  // additionally, try scanning if any mapping starts with the number (useful if input is incomplete)
+  // tambahan, coba pindai jika ada mapping yang dimulai dengan nomor (berguna jika input tidak lengkap)
   if (matches.length === 0) {
     Object.keys(PREFIX_TO_PROVIDER).forEach(p => {
       if (p.startsWith(n.slice(0, p.length))) {
@@ -98,7 +98,7 @@ export default function App() {
       const r = findProvidersByNumber(input);
       setResult(r);
       setLoading(false);
-    }, 300); // 300ms debounce
+    }, 300); // debounce 300ms
     setDebounceTimer(timer);
     return () => clearTimeout(timer);
   }, [input]);
@@ -164,7 +164,7 @@ export default function App() {
                       setTimeout(() => setCopied(false), 2000);
                     }}
                     className="px-3 sm:px-4 py-2 border-4 border-black bg-blue-500 text-white font-bold uppercase hover:bg-blue-600 text-sm sm:text-base"
-                  >{copied ? "COPIED!" : "SALIN NOMOR"}</button>
+                  >{copied ? "TERSALIN!" : "SALIN NOMOR"}</button>
                   <button
                     onClick={() => setInput("")}
                     className="px-3 sm:px-4 py-2 border-4 border-black bg-red-500 text-white font-bold uppercase hover:bg-red-600 text-sm sm:text-base"
@@ -196,11 +196,11 @@ export default function App() {
         </section>
 
         <footer className="mt-6 sm:mt-8 text-base sm:text-lg text-blue-600 font-black uppercase bg-yellow-200 p-4 border-8 border-black">
-          <p>Built with Vite + React + Tailwind CSS. Raw and Real-Time Provider Detection.</p>
+          <p>Dibangun dengan Vite + React + Tailwind CSS. Deteksi Provider Real-Time yang Mentah.</p>
           <div className="mt-4 text-sm text-gray-700">
-            <p><strong>Source Code:</strong> <a href="https://github.com/naandan/numera" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">GitHub Repository</a></p>
-            <p><strong>Author:</strong> Nandan</p>
-            <p><strong>License:</strong> MIT</p>
+            <p><strong>Kode Sumber:</strong> <a href="https://github.com/naandan/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Repositori GitHub</a></p>
+            <p><strong>Penulis:</strong> Nandan</p>
+            <p><strong>Lisensi:</strong> MIT</p>
           </div>
         </footer>
       </div>

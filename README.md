@@ -134,7 +134,7 @@ Kontribusi sangat diterima! Silakan ikuti langkah berikut:
 
 ## 📄 Lisensi
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Didistribusikan di bawah Lisensi MIT. Lihat `LICENSE` untuk informasi lebih lanjut.
 
 ## 👨‍💻 Author
 
@@ -142,12 +142,12 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - GitHub: [@nandan](https://github.com/nandan)
 - Twitter: [@nandan_dev](https://twitter.com/nandan_dev)
 
-## 🙏 Acknowledgments
+## 🙏 Ucapan Terima Kasih
 
-- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
-- [Vite](https://vitejs.dev/) - Next generation frontend tooling
-- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
-- [Bebas Neue Font](https://fonts.google.com/specimen/Bebas+Neue) - Display font from Google Fonts
+- [React](https://reactjs.org/) - Library JavaScript untuk membangun antarmuka pengguna
+- [Vite](https://vitejs.dev/) - Alat pengembangan frontend generasi berikutnya
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utility-first
+- [Bebas Neue Font](https://fonts.google.com/specimen/Bebas+Neue) - Font display dari Google Fonts
 
 ## 📞 Support
 
@@ -155,4 +155,4 @@ Jika Anda memiliki pertanyaan atau masalah, silakan buat [issue](https://github.
 
 ---
 
-⭐ **Star this repo** jika Anda menyukai proyek ini!
+⭐ **Beri bintang pada repo ini** jika Anda menyukai proyek ini!
