@@ -119,8 +119,10 @@ export default function App() {
 
         <div className="flex flex-col sm:flex-row gap-3">
           <input
+            type="number"
             aria-label="Nomor telepon"
             value={input}
+            min={0}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
             className="flex-1 border-4 border-black rounded-xl bg-white text-black px-4 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300 text-sm shadow-[3px_3px_0_#000] transition-all"
