@@ -46,17 +46,20 @@ Numera adalah aplikasi web untuk mengecek operator telepon seluler Indonesia sec
 ### Langkah Instalasi
 
 1. **Clone repository**
+
    ```bash
    git clone https://github.com/naandan/numera.git
    cd numera
    ```
 
 2. **Install dependencies**
+
    ```bash
    pnpm install
    ```
 
 3. **Jalankan development server**
+
    ```bash
    pnpm dev
    ```
@@ -102,11 +105,10 @@ Edit file `src/App.tsx` dan tambahkan prefix baru ke dalam `PREFIX_MAP`:
 
 ```typescript
 const PREFIX_MAP: Record<string, string[]> = {
-  "Telkomsel": [
-    "0852","0853","0811","0812","0813","0821","0822","0851"
-  ],
-  "OperatorBaru": [
-    "08xx","08yy" // Tambahkan prefix baru di sini
+  Telkomsel: ["0852", "0853", "0811", "0812", "0813", "0821", "0822", "0851"],
+  OperatorBaru: [
+    "08xx",
+    "08yy", // Tambahkan prefix baru di sini
   ],
   // ... operator lainnya
 };
@@ -139,6 +141,7 @@ Didistribusikan di bawah Lisensi MIT. Lihat `LICENSE` untuk informasi lebih lanj
 ## 👨‍💻 Author
 
 **Nandan**
+
 - GitHub: [@naandan](https://github.com/naandan)
 - Twitter: [@nandanrmdni](https://x.com/nandanrmdni)
 
